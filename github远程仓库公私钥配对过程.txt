@@ -1,0 +1,14 @@
+1.修改邮箱：ssh-keygen -t rsa -C "1661829205@qq.com"
+2.一路回车，将其设置为空密码
+
+3.cd 到家目录cd ~
+
+4.cd .ssh
+
+5.cat id_rsa.pub 查看公钥并复制
+
+6.在git的settings中找到公私钥配对的地方，名字随意设置，将公钥复制后创建
+
+7.ssh-add id_rsa若不能则：ssh-agent bash 再：ssh-add id_rsa
+
+8.查看是否成功：ssh -T git@github.com
